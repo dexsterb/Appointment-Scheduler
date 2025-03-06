@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="691.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsController">
+    <children>
+        <HBox alignment="CENTER_RIGHT" layoutX="20.0" layoutY="83.0" prefHeight="75.0" prefWidth="353.0" spacing="30.0">
+            <children>
+                <Label text="Filter by Appointments" />
+                <ComboBox fx:id="reportAppointmentComboBox" onAction="#reportAppointmentFilter" prefHeight="25.0" prefWidth="144.0" />
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <padding>
+                <Insets right="50.0" />
+            </padding>
+        </HBox>
+        <TableView fx:id="reportAppointmentsTableView" layoutX="17.0" layoutY="150.0" prefHeight="294.0" prefWidth="907.0">
+            <columns>
+                <TableColumn fx:id="reportIdColumn" prefWidth="60.0" text="ID" />
+                <TableColumn fx:id="reportTitleColumn" prefWidth="150.0" text="Title" />
+                <TableColumn fx:id="reportTypeColumn" prefWidth="150.0" text="Type" />
+                <TableColumn fx:id="reportDescriptionColumn" prefWidth="150.0" text="Description" />
+                <TableColumn fx:id="reportStartColumn" prefWidth="150.0" text="Start Date/Time" />
+                <TableColumn fx:id="reportEndColumn" prefWidth="150.0" text="End Date/Time" />
+                <TableColumn fx:id="reportCustomerIdColumn" prefWidth="90.0" text="Customer ID" />
+            </columns>
+        </TableView>
+        <HBox alignment="CENTER_RIGHT" layoutX="50.0" layoutY="625.0" prefHeight="75.0" prefWidth="900.0" />
+        <TableView fx:id="reportAppointmentTypeView" layoutX="21.0" layoutY="486.0" prefHeight="200.0" prefWidth="442.0">
+            <columns>
+                <TableColumn fx:id="reportAppointmentMonthColumn" prefWidth="145.0" text="Month" />
+                <TableColumn fx:id="reportAppointmentTypeColumn" prefWidth="145.0" text="Type" />
+                <TableColumn fx:id="reportAppointmentTotalColumn" prefWidth="145.0" text="Total" />
+            </columns>
+        </TableView>
+        <TableView fx:id="reportFirstlevelDivisionTableView" layoutX="478.0" layoutY="486.0" prefHeight="200.0" prefWidth="297.0">
+            <columns>
+                <TableColumn fx:id="reportDivisionColumn" prefWidth="145.0" text="Division Name" />
+                <TableColumn fx:id="reportCustomerTotalColumn" prefWidth="145.0" text="Total Customers" />
+            </columns>
+        </TableView>
+        <Label layoutX="532.0" layoutY="450.0" prefHeight="25.0" prefWidth="175.0" text="Total Customers by Division" />
+        <Label layoutX="133.0" layoutY="450.0" prefHeight="25.0" prefWidth="224.0" text="Total Appointments by Month and Type" />
+      <HBox alignment="CENTER_RIGHT" layoutX="663.0" layoutY="83.0" prefHeight="75.0" prefWidth="335.0" spacing="30.0">
+         <children>
+            <Label text="Filter by Customers" />
+            <ComboBox fx:id="reportCustomerComboBox" onAction="#reportCustomerFilter" prefHeight="25.0" prefWidth="140.0" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets right="50.0" />
+         </padding>
+      </HBox>
+          <Button fx:id="reportsMainMenuButton" layoutX="822.0" layoutY="473.0" mnemonicParsing="false" onAction="#mainMenu" prefHeight="46.0" prefWidth="102.0" text="Main Menu" />
+      <HBox alignment="CENTER_RIGHT" layoutX="345.0" layoutY="83.0" prefHeight="75.0" prefWidth="325.0" spacing="30.0">
+         <children>
+            <Label text="Filter by Contacts" />
+            <ComboBox fx:id="reportContactComboBox" onAction="#reportContactFilter" prefHeight="25.0" prefWidth="140.0" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets right="50.0" />
+         </padding>
+      </HBox>
+      <Button fx:id="reportReset" layoutX="822.0" layoutY="533.0" mnemonicParsing="false" onAction="#resetButton" prefHeight="46.0" prefWidth="102.0" text="Reset" />
+      <Button fx:id="exitButton" layoutX="822.0" layoutY="602.0" mnemonicParsing="false" onAction="#exit" prefHeight="46.0" prefWidth="102.0" text="Exit" />
+          <Label layoutX="440.0" layoutY="28.0" prefHeight="35.0" prefWidth="255.0" text="Appointment Reports">
+              <font>
+                  <Font name="System Bold" size="24.0" />
+              </font>
+          </Label>
+      <Label layoutX="20.0" layoutY="37.0" prefHeight="35.0" prefWidth="578.0" text="* The RESET button clears the filters and displays all appointments.">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="65.0" prefHeight="35.0" prefWidth="578.0" text="* Select EXIT to close the scheduler program.">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

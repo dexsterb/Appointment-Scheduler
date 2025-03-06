@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyCustomerController">
+    <children>
+          <Label layoutX="116.0" layoutY="13.0" text="Update Customer">
+              <font>
+                  <Font name="System Bold" size="24.0" />
+              </font>
+          </Label>
+          <Label layoutX="51.0" layoutY="91.0" text="ID:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+          <TextField fx:id="updateCustomerIdTextField" disable="true" layoutX="142.0" layoutY="92.0" promptText="Auto Generated/Disabled">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </TextField>
+          <Label layoutX="44.0" layoutY="140.0" text="Name:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+          <TextField fx:id="updateCustomerNameTextField" layoutX="141.0" layoutY="141.0" />
+          <Label layoutX="44.0" layoutY="191.0" text="Address:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+          <Label layoutX="44.0" layoutY="239.0" text="Country:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+          <Label layoutX="36.0" layoutY="280.0" text="State/Province:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+          <Label layoutX="36.0" layoutY="329.0" text="Postal Code:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+          <Label layoutX="34.0" layoutY="378.0" text="Phone Number:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+          <TextField fx:id="updateCustomerAddressTextField" layoutX="141.0" layoutY="192.0" />
+          <ComboBox fx:id="updateCustomerCountryComboBox" layoutX="142.0" layoutY="240.0" maxWidth="-Infinity" onAction="#updateCustomerCountry" prefHeight="26.0" prefWidth="187.0" />
+          <ComboBox fx:id="updateCustomerStateComboBox" layoutX="169.0" layoutY="281.0" maxWidth="-Infinity" onAction="#updateCustomerState" prefHeight="26.0" prefWidth="160.0" />
+          <TextField fx:id="updateCustomerPostalCodeTextField" layoutX="159.0" layoutY="330.0" />
+          <TextField fx:id="updateCustomerPhoneNumberTextField" layoutX="169.0" layoutY="379.0" />
+          <Button fx:id="updateCustomerSaveButton" layoutX="303.0" layoutY="435.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#save" prefWidth="52.0" text="Save" />
+          <Button fx:id="updateCustomerCancelButton" layoutX="373.0" layoutY="435.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="413.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
+    <children>
+        <Button fx:id="mainMenuLogOut" layoutX="309.0" layoutY="372.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#logoutButton" prefWidth="60.0" text="Log out" />
+          <Button fx:id="reportsButton" layoutX="114.0" layoutY="286.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#reportMenuButton" prefHeight="99.0" prefWidth="161.0" text="Reports">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+          <Button fx:id="customersButton" layoutY="157.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#customerMenuButton" prefHeight="99.0" prefWidth="162.0" text="Customers">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+          <Button fx:id="appointmentsButton" layoutX="228.0" layoutY="157.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#appointmentMenuButton" prefHeight="99.0" prefWidth="162.0" text="Appointments">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Label layoutX="89.0" layoutY="14.0" prefHeight="99.0" prefWidth="210.0" text="MAIN MENU">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentController">
+    <children>
+        <TableView fx:id="appointmentTableView" layoutX="32.0" layoutY="63.0" prefHeight="362.0" prefWidth="918.0">
+            <columns>
+                <TableColumn fx:id="appointmentIdColumn" prefWidth="50.0" text="ID" />
+                <TableColumn fx:id="appointmentTitleColumn" prefWidth="79.0" text="Title" />
+                <TableColumn fx:id="appointmentDescriptionColumn" prefWidth="119.0" text="Description" />
+                <TableColumn fx:id="appointmentLocationColumn" minWidth="0.0" prefWidth="87.0" text="Location" />
+                <TableColumn fx:id="appointmentContactIdColumn" prefWidth="55.0" text="Contact" />
+                <TableColumn fx:id="appointmentTypeColumn" prefWidth="107.0" text="Type" />
+                <TableColumn fx:id="appointmentStartColumn" prefWidth="125.0" text="Start Date/Time" />
+                <TableColumn fx:id="appointmentEndColumn" prefWidth="125.0" text="End Date/Time" />
+                <TableColumn fx:id="appointmentCustomerIdColumn" minWidth="0.0" prefWidth="85.0" text="Customer ID" />
+                <TableColumn fx:id="appointmentUserIdColumn" prefWidth="67.0" text="User ID" />
+            </columns>
+        </TableView>
+        <HBox alignment="CENTER_RIGHT" layoutX="32.0" layoutY="425.0" prefHeight="75.0" prefWidth="918.0" spacing="30.0">
+            <children>
+                <RadioButton fx:id="appointmentsByWeekRBtn" mnemonicParsing="false" onAction="#appointmentByWeek" text="Current Week">
+                    <HBox.margin>
+                        <Insets left="205.0" />
+                    </HBox.margin>
+               <toggleGroup>
+                        <ToggleGroup fx:id="appointmentsViewTG" />
+               </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="appointmentsByMonthRBtn" mnemonicParsing="false" onAction="#appointmentByMonth" prefHeight="18.0" prefWidth="109.0" text="Current Month" toggleGroup="$appointmentsViewTG" />
+                <RadioButton fx:id="appointmentsViewAllRBtn" mnemonicParsing="false" onAction="#appointmentsViewAllButton" prefHeight="18.0" prefWidth="73.0" selected="true" text="View All" toggleGroup="$appointmentsViewTG">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </RadioButton>
+                <Button fx:id="appointmentsMenuButton" layoutX="114.0" layoutY="10.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#appointmentMenu" prefHeight="26.0" prefWidth="62.0" text="Menu" />
+                <Button fx:id="appointmentsAddButton" maxWidth="-Infinity" mnemonicParsing="false" onAction="#appAddButton" prefHeight="26.0" prefWidth="64.0" text="Add" />
+                <Button fx:id="appointmentsUpdateButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#appointmentUpdateButton" prefHeight="26.0" prefWidth="66.0" text="Update" />
+                <Button fx:id="appointmentsDeleteButton" layoutX="62.0" layoutY="10.0" maxWidth="-Infinity" mnemonicParsing="false" onAction="#appDeleteButton" prefHeight="26.0" prefWidth="66.0" text="Delete" />
+            </children>
+        </HBox>
+          <Label layoutX="344.0" layoutY="14.0" text="Appointments">
+              <font>
+                  <Font name="System Bold" size="24.0" />
+              </font>
+          </Label>
+    </children>
+</AnchorPane>
