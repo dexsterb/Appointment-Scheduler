@@ -1,4 +1,8 @@
+username: admin
+password: admin
 
+username: test
+password: test
 Purpose of application
 The objective of this software is to deliver a scheduling desktop application with a user-friendly graphical interface (GUI).
 
